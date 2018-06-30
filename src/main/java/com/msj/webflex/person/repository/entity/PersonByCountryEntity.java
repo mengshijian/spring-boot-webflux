@@ -1,14 +1,13 @@
 package com.msj.webflex.person.repository.entity;
 
 import java.util.Objects;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.Table;
-
-@Table("people_by_country")
+@Document(collection = "people_by_country")
 public class PersonByCountryEntity {
 
-  @PrimaryKey private PersonByCountryKey key;
+  private PersonByCountryKey key;
   private int age;
 
   public PersonByCountryEntity(PersonByCountryKey key, int age) {

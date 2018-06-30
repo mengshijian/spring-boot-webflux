@@ -2,17 +2,13 @@ package com.msj.webflex.person.repository.entity;
 
 import java.util.Objects;
 import java.util.UUID;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
-import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
-import org.springframework.data.cassandra.core.mapping.Table;
-
-import static org.springframework.data.cassandra.core.cql.PrimaryKeyType.PARTITIONED;
-
-@Table("people")
+@Document(collection = "people")
 public class PersonEntity {
 
-  @PrimaryKey("person_id")
+  @Field("person_id")
   private UUID id;
 
   private String firstName;

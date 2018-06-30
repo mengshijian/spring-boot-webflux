@@ -4,24 +4,14 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.UUID;
 
-import org.springframework.data.cassandra.core.mapping.PrimaryKeyClass;
-import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
-
-import static org.springframework.data.cassandra.core.cql.PrimaryKeyType.*;
-
-@PrimaryKeyClass
 public class PersonByCountryKey implements Serializable {
 
-  @PrimaryKeyColumn(type = PARTITIONED)
   private String country;
 
-  @PrimaryKeyColumn(name = "first_name", type = CLUSTERED, ordinal = 0)
   private String firstName;
 
-  @PrimaryKeyColumn(name = "last_name", type = CLUSTERED, ordinal = 1)
   private String lastName;
 
-  @PrimaryKeyColumn(name = "person_id", type = CLUSTERED, ordinal = 2)
   private UUID id;
 
   public PersonByCountryKey(String country, String firstName, String lastName, UUID id) {
