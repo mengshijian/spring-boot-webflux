@@ -1,6 +1,6 @@
-package com.lankydanblog.tutorial.client;
+package com.msj.webflex.client;
 
-import com.lankydanblog.tutorial.person.Person;
+import com.msj.webflex.person.Person;
 import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;

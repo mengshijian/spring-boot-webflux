@@ -1,7 +1,7 @@
-package com.lankydanblog.tutorial.person.web;
+package com.msj.webflex.person.web;
 
-import com.lankydanblog.tutorial.person.Person;
-import com.lankydanblog.tutorial.person.PersonManager;
+import com.msj.webflex.person.Person;
+import com.msj.webflex.person.PersonManager;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;

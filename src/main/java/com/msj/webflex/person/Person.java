@@ -1,4 +1,4 @@
-package com.lankydanblog.tutorial.person;
+package com.msj.webflex.person;
 
 import java.util.Objects;
 import java.util.UUID;

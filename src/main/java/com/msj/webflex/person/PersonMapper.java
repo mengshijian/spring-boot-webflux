@@ -1,8 +1,8 @@
-package com.lankydanblog.tutorial.person;
+package com.msj.webflex.person;
 
-import com.lankydanblog.tutorial.person.repository.entity.PersonByCountryEntity;
-import com.lankydanblog.tutorial.person.repository.entity.PersonByCountryKey;
-import com.lankydanblog.tutorial.person.repository.entity.PersonEntity;
+import com.msj.webflex.person.repository.entity.PersonByCountryEntity;
+import com.msj.webflex.person.repository.entity.PersonByCountryKey;
+import com.msj.webflex.person.repository.entity.PersonEntity;
 
 class PersonMapper {
 

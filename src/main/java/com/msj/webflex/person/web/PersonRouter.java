@@ -1,4 +1,4 @@
-package com.lankydanblog.tutorial.person.web;
+package com.msj.webflex.person.web;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

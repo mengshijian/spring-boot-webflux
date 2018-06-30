@@ -1,6 +1,6 @@
-package com.lankydanblog.tutorial;
+package com.msj.webflex;
 
-import com.lankydanblog.tutorial.client.Client;
+import com.msj.webflex.client.Client;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

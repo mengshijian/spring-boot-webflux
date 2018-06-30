@@ -1,15 +1,15 @@
-package com.lankydanblog.tutorial.person;
+package com.msj.webflex.person;
 
-import com.lankydanblog.tutorial.person.repository.PersonByCountryRepository;
-import com.lankydanblog.tutorial.person.repository.PersonRepository;
+import com.msj.webflex.person.repository.PersonByCountryRepository;
+import com.msj.webflex.person.repository.PersonRepository;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
-import static com.lankydanblog.tutorial.person.PersonMapper.toPersonByCountryEntity;
-import static com.lankydanblog.tutorial.person.PersonMapper.toPersonEntity;
+import static com.msj.webflex.person.PersonMapper.toPersonByCountryEntity;
+import static com.msj.webflex.person.PersonMapper.toPersonEntity;
 
 @Component
 public class PersonManager {
@@ -23,19 +23,20 @@ public class PersonManager {
     this.personByCountryRepository = personByCountryRepository;
   }
 
-  public Flux<Person> findAll() {
-    return personByCountryRepository.findAll().map(PersonMapper::toPerson);
+  public Flux<com.msj.webflex.person.Person> findAll() {
+    return personByCountryRepository.findAll().map(com.msj.webflex.person.PersonMapper::toPerson);
   }
 
-  public Flux<Person> findAllByCountry(String country) {
-    return personByCountryRepository.findAllByKeyCountry(country).map(PersonMapper::toPerson);
+  public Flux<com.msj.webflex.person.Person> findAllByCountry(String country) {
+    return personByCountryRepository.findAllByKeyCountry(country).map(
+            com.msj.webflex.person.PersonMapper::toPerson);
   }
 
-  public Mono<Person> findById(final UUID id) {
-    return personRepository.findById(id).map(PersonMapper::toPerson).switchIfEmpty(Mono.empty());
+  public Mono<com.msj.webflex.person.Person> findById(final UUID id) {
+    return personRepository.findById(id).map(com.msj.webflex.person.PersonMapper::toPerson).switchIfEmpty(Mono.empty());
   }
 
-  public Mono<Person> save(Person person) {
+  public Mono<com.msj.webflex.person.Person> save(com.msj.webflex.person.Person person) {
     return Mono.fromSupplier(
         () -> {
           personRepository
@@ -46,7 +47,7 @@ public class PersonManager {
         });
   }
 
-  public Mono<Person> update(Person old, Person updated) {
+  public Mono<com.msj.webflex.person.Person> update(com.msj.webflex.person.Person old, com.msj.webflex.person.Person updated) {
     return Mono.fromSupplier(
         () -> {
           personRepository
@@ -58,7 +59,7 @@ public class PersonManager {
         });
   }
 
-  public Mono<Void> delete(Person person) {
+  public Mono<Void> delete(com.msj.webflex.person.Person person) {
     return Mono.fromSupplier(
         () -> {
           personRepository

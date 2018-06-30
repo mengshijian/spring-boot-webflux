@@ -1,4 +1,4 @@
-package com.lankydanblog.tutorial.person.repository.entity;
+package com.msj.webflex.person.repository.entity;
 
 import java.io.Serializable;
 import java.util.Objects;
